@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BemHelper from 'react-bem-helper';
-import './nav.less';
+import './nav.sass';
 const classes = new BemHelper({name: 'nav'});
 
 export default class Nav_container extends Component{

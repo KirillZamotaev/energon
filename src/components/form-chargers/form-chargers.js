@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import BemHelper from 'react-bem-helper';
 import { formValidate } from '../../helpers/index';
-import FormUI from './form_ui';
+import Form from '../form/form_container';
+import Field from '../field/field'
 
-const classes = new BemHelper({name: 'nav'});
+const classes = new BemHelper({name: 'form-chargers'});
 
 export default class Nav_container extends Component{
 	constructor(props){
@@ -13,23 +14,22 @@ export default class Nav_container extends Component{
 	}
 	
 	submitForm(e){
-	
+		
+		
 	}
 	
 	handlerInput(value, fieldName){
 		
 	}
 	
-	render() {
-		const opt = {
-			handlerInput: this.handlerInput,
-			submitForm: this.submitForm,
-			data: this.props.data
-		}
-		
-		return (<FormUI {...opt} >
-				{this.props.children}
-			<FormUI {...opt} >
+	render(){
+		return (
+		<div {...classes('')}>
+		 <Form {...classes('first-step')}>
+			<Field type="number" placholder/>
+			<button type='submit'>NEXT</button>
+		</Form>
+		</div>
 		);
 	}
 	

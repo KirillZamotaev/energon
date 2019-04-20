@@ -1,28 +1,26 @@
-import React, { Component } from 'react';
+import React, { Component, cloneElement, Children } from 'react';
 import BemHelper from 'react-bem-helper';
 import { formValidate } from '../../helpers/index';
+import ErrorOutput from '../error-output/error-output';
+import './form.sass';
 
-const classes = new BemHelper({name: 'nav'});
+const classes = new BemHelper({name: 'form-validate'});
 
-export default class Nav_container extends Component{
+export default class FormUI extends Component{
 	constructor(props){
 		super(props);	
 		this.submitForm = this.submitForm.bind(this);
 		this.handlerInput = this.handlerInput.bind(this);
 	}
 	
-	submitForm(e){
-		
-		
-	}
-	
-	handlerInput(value, fieldName){
-		
-	}
-	
 	render(){
+
+		let { opt } =this.props
 		return (
-			<form>
+			<form onSumbit={} {...classes('')}>
+				{ Children.map((child, idx)=>{
+					return cloneElement(child, opt)				
+				}) }
 			</form>
 		);
 	}

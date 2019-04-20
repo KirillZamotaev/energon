@@ -1,8 +1,11 @@
 module.exports = {
 	state:{
+		chargers:null,
 		form: {
-			data:{},
-			formErrors: [],
+			steps: 2,
+			initialStep: 1,
+			data:null,
+			formErrors: {},
 			pending: false,
 			success: false,
 			error: false
