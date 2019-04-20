@@ -1,5 +1,0 @@
-
-const formEdit = (state, action)=>{
-	
-	
-}

@@ -1,6 +1,6 @@
 module.exports = {
 	state:{
-		chargers:null,
+		chargersData:null,
 		form: {
 			steps: 2,
 			initialStep: 1,
@@ -9,6 +9,9 @@ module.exports = {
 			pending: false,
 			success: false,
 			error: false
+		},
+		settings:{
+		   apiUrl:'https://api.tau.green/v1',		
 		}
 	}
 }

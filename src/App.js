@@ -3,7 +3,7 @@ import logo from './svg/logo.svg';
 import {Provider, connect } from 'react-redux';
 import store from './store/store';
 import Main from './pages/main';
-
+import './styles/global.sass';
 class App extends Component {
 	
 	

@@ -1,8 +1,21 @@
 .nav 
- background: #4EBFD7;
- 
- &
-  color:#fff
-
-
+  background: #4EBFD7
+  height: 50px
+  display: flex
+  align-items: center
+  color: #FFF
+  
+  &__aside-slide
+    position: fixed
+    top: 0px
+    left: 0px
+    width: 0px
+    background: #4ebfd7
+    border-right: 1px solid #FFF
+    height: 100vh
+    transition: width 0.2s
+    overflow: hidden	
+    &.open
+     width: 300px
+      
 
