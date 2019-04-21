@@ -1,4 +1,4 @@
-const rootReducer = (state, {type, payload})=>{
+const rootReducer = (state, {type, payload}) => {
 	if (type === 'FORM_LOADING'){
 	  let newState = Object.assign({}, state);
   	  newState.state.form.loading = payload;
@@ -13,10 +13,7 @@ const rootReducer = (state, {type, payload})=>{
 	  return newState;
 	} else if (type === 'SET_FIELD'){
 	  let newState = Object.assign({}, state);
-	  let { data } = newState.state.form;
-	  data = data || [];	  
-	  [payload.fieldName] = payload.value;
-          newState.state.form.data = data;
+          newState.state.form.data = payload;
 	  return newState;
 	} else if (type === 'UPDATE_CHARGER_DATA'){
 	  let newState = Object.asign({}, state);

@@ -1,6 +1,7 @@
 module.exports = {
 	state:{
 		chargersData:null,
+		chargerData: null,
 		form: {
 			steps: 2,
 			initialStep: 1,

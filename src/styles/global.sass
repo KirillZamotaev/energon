@@ -1,2 +1,51 @@
+@font-face 
+	font-family: Roboto
+	src: url('../fonts/Roboto-Regular.woff')
+*
+ font-family: Roboto
+
 body, html
- margin: 0px;
+ margin: 0px
+ overflow-x: hidden;
+ font-family: Roboto
+
+h2 
+    font-size: 48px
+    color: #4EBFD7
+    font-weight: 100	
+
+.tooltip
+	display: inline-block
+	position: relative
+	width: 20px
+	height: 20px
+	&__icon
+		display: inline-block
+		width: 20px
+		height: 20px
+		background-size: 100%
+		background-position: center
+		backgroun-repeat: no-repeat
+		background-image: url('../svg/icon-tooltip.svg')
+	&__text
+		visibility: hidden
+		position: absolute
+		display: block
+		width: 300px
+		background: #FFF
+		padding: 5px 10px
+		color: #4EBFD7
+		opacity: 0
+	&:hover &__text
+		visibility: visible
+		position: absolute
+		display: block
+		width: 300px
+		opacity: 1
+		transition: opacity 0.2s
+
+.btn
+    	display: block
+    	width: 300px
+    	border-radius: 5px
+    	font-size: 24px

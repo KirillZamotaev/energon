@@ -7,35 +7,35 @@ const SET_STEP = 'SET_STEP';
 const UPDATE_CHARGERS_DATA = 'UPDATE_CHARGERS_DATA';
 
 
-function formLoading(val){
-	return {type:FORM_LOADING, payload:val}
+let formLoading = (val) => {
+	return { type:FORM_LOADING, payload:val}
 }
 
-function formSuccess(val){
+let formSuccess = (val) => {
 	return {type:FORM_SUCCESS, payload:val}
 }
 
-function formError(val){
+let formError = (val) => {
 	return {type:FORM_ERROR, payload:val}
 } 
 
-function setField(val){
+let setField = (val) => {
 	return {type:SET_FIELD, payload:val}
 }
 
-function showErrors(val){
+let showErrors = (val) => {
 	return {type:SHOW_ERRORS, payload:val}
 }
 
-function setStep(val){
+let setStep = (val) => {
 	return {type:SET_STEP, payload:val}
 }
 
-function updateChargersData(val){
+let updateChargersData = (val) => {
 	return {type:UPDATE_CHARGERS_DATA, payload:val}
 }
 
-module.exports ={ setField, showErrors, setStep, updateChargersData}
+module.exports ={ setField, formError, showErrors, setStep, updateChargersData, formLoading}
 
 
 

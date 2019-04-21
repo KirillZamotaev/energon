@@ -13,14 +13,16 @@ export default class FormUI extends Component{
 	
 	render(){
 
-		let { data, submitForm, handlerInput, getFields, placeholder } =this.props;
-		let opt = { onChange: handlerInput, placeholder}
+		let { data, submitForm, handlerInput, getFields, placeholder, className } =this.props;
+		let opt = { onChange: handlerInput, placeholder: placeholder}
 		return (
-			<form onSubmit={submitForm} {...classes('')}>
+			<form onSubmit={submitForm} {...classes('')}  className={className}>
 				{ Children.map(this.props.children,child => {
-					let { name } = child.props;
-					opt.value = data ? data[name] : ''; 
-					return cloneElement(child, opt)				
+					if(child){					
+						let { name } = child.props;
+						opt.value = data ? data[name] : ''; 
+						return cloneElement(child, opt)
+					}				
 				}) }
 			</form>
 		);

@@ -9,9 +9,7 @@ export default class ListChargersContainer extends Component{
 		let { data, settings } = this.props;
 		return (
 			<div {...classes()}>
-				 <h2 {...classes('header')}>
-									
-				</h2>
+				 <h2 {...classes('header')}>Your charging stations</h2>
 				<div {...classes('container')} >
 									
 				</div>		
