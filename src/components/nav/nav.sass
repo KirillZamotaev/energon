@@ -1,21 +1,42 @@
 .nav 
-  background: #4EBFD7
-  height: 100px
-  display: flex
-  align-items: center
-  color: #FFF
-  
-  &__aside-slide
-    position: fixed
-    top: 0px
-    left: 0px
-    width: 0px
-    background: #4ebfd7
-    border-right: 1px solid #FFF
-    height: 100vh
-    transition: width 0.2s
-    overflow: hidden	
-    &.open
-     width: 300px
-      
-
+	background: #4EBFD7
+	height: 100px
+	display: flex
+	align-items: center
+	color: #fff
+	
+ 
+	&__burger-menu
+		display: inline-block
+		width: 20px
+		&--line
+			width: 20px
+		    	display: block
+		    	height: 2px
+		    	border: none
+		    	background: #fff
+		    	position: relative
+			&:before, &:after
+				content: ""
+				width: 20px
+			    	display: block
+			    	height: 2px
+			    	border: none
+			    	background: #fff
+				position: absolute
+			&:before
+				bottom: -10px
+			&:after
+				top: -10px
+	&__aside-slide
+		position: fixed
+		top: 0px
+		left: 0px
+		width: 0px
+		background: #4ebfd7
+		border-right: 1px solid #FFF
+		height: 100vh
+		transition: width 0.2s
+		overflow: hidden	
+		&.open
+			width: 300px      
